@@ -1,0 +1,42 @@
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: #F4F7FC; /* Um cinza-azulado bem claro */
+    -fx-padding: 20px;
+}
+
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50; /* Azul escuro */
+    -fx-padding-bottom: 20px;
+}
+
+.nav-button {
+    -fx-background-color: #3498DB; /* Azul suave */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 200px; /* Largura fixa */
+    -fx-pref-height: 40px; /* Altura fixa */
+    -fx-background-radius: 8px; /* Cantos arredondados */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3); /* Sombra suave */
+}
+
+.nav-button:hover {
+    -fx-background-color: #2980B9; /* Azul um pouco mais escuro */
+}
+
+.exit-button {
+    -fx-background-color: #E74C3C; /* Vermelho suave */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3);
+}
+
+.exit-button:hover {
+    -fx-background-color: #C0392B; /* Vermelho mais escuro */
+}

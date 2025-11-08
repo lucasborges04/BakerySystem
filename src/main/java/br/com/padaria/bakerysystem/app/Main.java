@@ -1,9 +1,12 @@
 package br.com.padaria.bakerysystem.app;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-// A classe principal de uma aplicação JavaFX DEVE estender Application
+import java.io.IOException;
+
 public class Main extends Application {
 
     public static void main(String[] args) {
@@ -11,18 +14,24 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws IOException {
 
-        System.out.println("------------------------------------");
-        System.out.println("Sistema da Padaria iniciado!");
-        System.out.println("Projeto configurado com sucesso.");
-        System.out.println("------------------------------------");
+        // Mensagem no console (opcional, mas bom para debug)
+        System.out.println("Carregando tela principal...");
 
-        // Se quiséssemos mostrar uma janela (próximos passos):
-        // FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/br/com/padaria/bakerysystem/view/Login.fxml"));
-        // Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        // primaryStage.setTitle("BakerySystem - Login");
-        // primaryStage.setScene(scene);
-        // primaryStage.show();
+        String fxmlPath = "/br/com/padaria/bakerysystem/view/MainView.fxml";
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlPath));
+
+        // O fxmlLoader.load() constrói a interface (VBox, botões, etc.)
+        Scene scene = new Scene(fxmlLoader.load(), 400, 450); // Largura 400, Altura 450
+
+        // 4. Configura a Janela (Stage)
+        primaryStage.setTitle("BakerySystem - Tela Principal");
+        primaryStage.setScene(scene);
+        primaryStage.setResizable(false); // Impede o usuário de redimensionar
+        primaryStage.show(); // Mostra a janela
+
+        System.out.println("Aplicação iniciada com sucesso.");
     }
 }
